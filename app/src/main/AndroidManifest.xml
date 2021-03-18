@@ -12,15 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
-        <activity android:name=".SummaryActivity" />/activity>
-        <activity android:name=".AntroewaActivity"/>
-        <activity android:name=".BitawiriActivity" />
-        <activity android:name=".KoolActivity" />
-        <activity android:name=".BoulangerActivity" />
-        <activity android:name=".KlaroenActivity" />
-        <activity android:name=".KousebandActivity" />
-        <activity android:name=".InfoActivity" />
-        <activity android:name=".PompoenActivity" />
+        <activity android:name=".SummaryActivity" />
+        <activity android:name=".items.AntroewaActivity"/>
+        <activity android:name=".items.BitawiriActivity" />
+        <activity android:name=".items.KoolActivity" />
+        <activity android:name=".items.BoulangerActivity" />
+        <activity android:name=".items.KlaroenActivity" />
+        <activity android:name=".items.KousebandActivity" />
+        <activity android:name=".items.KomkommerActivity" />
+        <activity android:name=".items.PompoenActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

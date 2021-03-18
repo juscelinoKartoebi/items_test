@@ -1,26 +1,28 @@
-package sr.unasat.test;
+package sr.unasat.test.items;
 
-        import android.app.LoaderManager;
-        import android.content.ContentValues;
-        import android.content.CursorLoader;
-        import android.content.Intent;
-        import android.content.Loader;
-        import android.database.Cursor;
-        import android.net.Uri;
-        import androidx.appcompat.app.AppCompatActivity;
-        import android.os.Bundle;
-        import android.view.View;
-        import android.widget.Button;
-        import android.widget.CheckBox;
-        import android.widget.ImageButton;
-        import android.widget.ImageView;
-        import android.widget.TextView;
-        import android.widget.Toast;
+import android.app.LoaderManager;
+import android.content.ContentValues;
+import android.content.CursorLoader;
+import android.content.Intent;
+import android.content.Loader;
+import android.database.Cursor;
+import android.net.Uri;
+import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
-        import sr.unasat.test.Database.OrderContract;
+import sr.unasat.test.Database.OrderContract;
+import sr.unasat.test.R;
+import sr.unasat.test.SummaryActivity;
 
-public class InfoActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
+public class PompoenActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     // first of all we will get the views that are  present in the layout of info
 
@@ -36,7 +38,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info);
+        setContentView(R.layout.activity_pompoen);
 
         imageView = findViewById(R.id.imageViewInfo);
         plusquantity = findViewById(R.id.addquantity);
@@ -50,12 +52,13 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
 
         // setting the name of drink
 
-        vegetableName.setText("Komkommer");
+        vegetableName.setText("Pompoen");
+        imageView.setImageResource(R.drawable.pompoen);
 
         addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InfoActivity.this, SummaryActivity.class);
+                Intent intent = new Intent(PompoenActivity.this, SummaryActivity.class);
                 startActivity(intent);
                 // once this button is clicked we want to save our values in the database and send those values
                 // right away to summary activity where we display the order info
@@ -68,7 +71,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void onClick(View v) {
                 // coffee price
-                int basePrice = 15;
+                int basePrice = 20;
                 quantity++;
                 displayQuantity();
                 int coffePrice = basePrice * quantity;
@@ -79,7 +82,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
                 // checkBoxes functionality
 
                 int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-                vegetablePrice.setText("$ " + ifCheckBox);
+               vegetableName.setText("$ " + ifCheckBox);
 
             }
         });
@@ -88,10 +91,10 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
             @Override
             public void onClick(View v) {
 
-                int basePrice = 15;
+                int basePrice = 20;
                 // because we dont want the quantity go less than 0
                 if (quantity == 0) {
-                    Toast.makeText(InfoActivity.this, "Cant decrease quantity < 0", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(PompoenActivity.this, "Cant decrease quantity < 0", Toast.LENGTH_SHORT).show();
                 } else {
                     quantity--;
                     displayQuantity();
@@ -155,7 +158,7 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private int CalculatePrice(CheckBox addExtraCream, CheckBox addToppings) {
 
-        int basePrice = 15;
+        int basePrice = 20;
 
         if (addExtraCream.isChecked()) {
             // add the cream cost $2
@@ -206,15 +209,16 @@ public class InfoActivity extends AppCompatActivity implements LoaderManager.Loa
             int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
             int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
 
+
             String nameofvegetable = cursor.getString(name);
             String priceofvegetable = cursor.getString(price);
-            String quantityofvegetable = cursor.getString(quantity);
+            String quantityofdrink = cursor.getString(quantity);
             String yeshasCream = cursor.getString(hasCream);
             String yeshastopping = cursor.getString(hasTopping);
 
             vegetableName.setText(nameofvegetable);
             vegetablePrice.setText(priceofvegetable);
-            quantitynumber.setText(quantityofvegetable);
+            quantitynumber.setText(quantityofdrink);
         }
 
 

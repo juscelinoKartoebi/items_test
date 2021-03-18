@@ -13,6 +13,15 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import sr.unasat.test.items.AntroewaActivity;
+import sr.unasat.test.items.BitawiriActivity;
+import sr.unasat.test.items.BoulangerActivity;
+import sr.unasat.test.items.KomkommerActivity;
+import sr.unasat.test.items.KlaroenActivity;
+import sr.unasat.test.items.KoolActivity;
+import sr.unasat.test.items.KousebandActivity;
+import sr.unasat.test.items.PompoenActivity;
+
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> {
 
     List<Model> modelList;
@@ -80,7 +89,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             int position = getAdapterPosition();
 
             if (position == 0) {
-                Intent intent = new Intent(context, InfoActivity.class);
+                Intent intent = new Intent(context, KomkommerActivity.class);
                 context.startActivity(intent);
             }
 
