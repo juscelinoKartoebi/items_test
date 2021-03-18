@@ -22,15 +22,14 @@ public class MainActivity extends AppCompatActivity {
         // creating an arraylist
 
         modelList = new ArrayList<>();
-        modelList.add(new Model("Green Tea", getString(R.string.greentea), R.drawable.greentea ));
-        modelList.add(new Model("Latte", getString(R.string.latte), R.drawable.late));
-        modelList.add(new Model("Orange Smoothie", getString(R.string.orangesmoothie), R.drawable.orange));
-        modelList.add(new Model("Orange Vanilla", getString(R.string.orangevanilla), R.drawable.orangevanilla));
-        modelList.add(new Model("Cappucino", getString(R.string.cappcuni), R.drawable.cappcunio));
-        modelList.add(new Model("Thai Tea", getString(R.string.thaitea), R.drawable.thaitea));
-        modelList.add(new Model("Tea", getString(R.string.tea), R.drawable.tea));
-        modelList.add(new Model("Bubble Tea", getString(R.string.bubbletea), R.drawable.milk));
-        modelList.add(new Model("Matcha", getString(R.string.match), R.drawable.match));
+        modelList.add(new Model("Komkommer", getString(R.string.komkommer), R.drawable.komkommer));
+        modelList.add(new Model("pompoen", getString(R.string.pompoen), R.drawable.pompoen));
+        modelList.add(new Model("Komkommer", getString(R.string.kouseband), R.drawable.kouseband));
+        modelList.add(new Model("boulanger", getString(R.string.boulanger), R.drawable.boulanger));
+        modelList.add(new Model("klaroen", getString(R.string.klaroen), R.drawable.klaroen));
+        modelList.add(new Model("kool", getString(R.string.kool), R.drawable.kool));
+        modelList.add(new Model("bitawiri", getString(R.string.bitawiri), R.drawable.bitawiri));
+        modelList.add(new Model("antroewa", getString(R.string.antroewa), R.drawable.antroewa));
 
         // recyclerview
         recyclerView = findViewById(R.id.recyclerView);

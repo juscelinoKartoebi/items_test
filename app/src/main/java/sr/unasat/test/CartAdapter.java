@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import sr.unasat.test.Database.OrderContract;
 
+
 public class CartAdapter extends CursorAdapter {
 
 

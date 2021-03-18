@@ -13,18 +13,18 @@
         android:text="Drink Name"
         android:textStyle="bold"
         android:id="@+id/drinkNameinOrderSummary"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginStart="10dp"/>
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/orderSummary"
-        android:layout_toRightOf="@+id/drinkNameinOrderSummary"
+        android:layout_toEndOf="@+id/drinkNameinOrderSummary"
         android:text="x"
         android:textStyle="bold"
         android:id="@+id/quantityinOrderSummary"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginStart="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -32,17 +32,17 @@
         android:id="@+id/hasTopping"
         android:textStyle="italic"
 
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_below="@id/drinkNameinOrderSummary"
         android:text="has topping"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/hasTopping"
+        android:layout_toEndOf="@+id/hasTopping"
         android:id="@+id/hasCream"
         android:textStyle="italic"
-        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
         android:layout_below="@id/drinkNameinOrderSummary"
         android:text="has cream"/>
 
@@ -51,10 +51,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:text="$10"
         android:id="@+id/priceinOrderSummary"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginEnd="10dp"/>
 
 
 

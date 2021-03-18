@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">test</string>
-
-
-    <string name="greentea">Green Tea. Blended with mint,
-    lemongrass and lemon verbena, then sweetened just right and given a good shake with ice, so-refreshing!</string>
-
-
-    <string name="latte">A neat twist that can be done with any of the new Teavana teas is called a tea latte.
-    Basically, a tea latte is equal parts hot tea and steamed milk.  </string>
+    <string name="komkommer">Grote, groene komkommers</string>
+    <string name="pompoen">Ronde pompoens</string>
+    <string name="kouseband">Groene, lange kouseband</string>
+    <string name="antroewa">Kleine antroewas</string>
+    <string name="boulanger">Dikke, gladde boulangers</string>
+    <string name="bitawiri">Grote, zachte bladeren</string>
+    <string name="kool">Groen kool met gaten</string>
+    <string name="klaroen">Kleine blaadjes met weinig bloemen</string>
 
 
     <string name="orangesmoothie">Starbucks Orange Mango Smoothie. A nourishing blend of natural orange mango juice,

@@ -33,7 +33,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
     }
 
     @Override
-    public void onBindViewHolder( ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, int position) {
 
         // here we will find the position and start setting the output on our views
 
@@ -64,9 +64,9 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            mDrinkName = itemView.findViewById(R.id.coffeeName);
+            mDrinkName = itemView.findViewById(R.id.vegetableName);
             mDrinkDescription = itemView.findViewById(R.id.description);
-            imageView = itemView.findViewById(R.id.coffeeImage);
+            imageView = itemView.findViewById(R.id.vegetableImage);
             itemView.setOnClickListener(this);
 
 
@@ -85,9 +85,41 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
             }
 
             if (position == 1) {
-                Intent intent2 = new Intent(context, LatteActivity.class);
+                Intent intent2 = new Intent(context, PompoenActivity.class);
                 context.startActivity(intent2);
             }
+            if (position == 2) {
+                Intent intent3 = new Intent(context, KousebandActivity.class);
+                context.startActivity(intent3);
+            }
+            if (position == 3) {
+                Intent intent4 = new Intent(context, BoulangerActivity.class);
+                context.startActivity(intent4);
+
+            }
+            if (position == 4) {
+                Intent intent5 = new Intent(context, KlaroenActivity.class);
+                context.startActivity(intent5);
+
+            }
+            if (position == 5) {
+                Intent intent6 = new Intent(context, KoolActivity.class);
+                context.startActivity(intent6);
+
+            }
+            if (position == 6) {
+                Intent intent7 = new Intent(context, BitawiriActivity.class);
+                context.startActivity(intent7);
+
+            }
+            if (position == 7) {
+                Intent intent8 = new Intent(context, AntroewaActivity.class);
+                context.startActivity(intent8);
+            }
+
+
         }
+
     }
+
 }

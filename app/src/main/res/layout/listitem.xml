@@ -28,9 +28,9 @@
             <ImageView
                 android:layout_width="88dp"
                 android:layout_height="88dp"
-                android:id="@+id/coffeeImage"
+                android:id="@+id/vegetableImage"
                 android:layout_marginTop="4dp"
-                android:src="@drawable/greentea"/>
+                android:src="@drawable/komkommer"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -38,28 +38,28 @@
                 tools:text=""
                 android:textSize="12sp"
                 android:layout_marginRight="12dp"
-                android:layout_below="@+id/coffeeName"
+                android:layout_below="@+id/vegetableName"
                 android:layout_marginLeft="12dp"
                 android:id="@+id/description"
-                android:layout_toRightOf="@+id/coffeeImage"/>
+                android:layout_toEndOf="@+id/vegetableImage"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="5dp"
-                android:id="@+id/coffeeName"
+                android:id="@+id/vegetableName"
                 android:textStyle="italic"
                 android:textSize="26sp"
-                android:layout_toRightOf="@+id/coffeeImage"
+                android:layout_toEndOf="@+id/vegetableImage"
                 tools:text="Green Tea"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/description"
-                android:layout_toRightOf="@+id/coffeeImage"
+                android:layout_toEndOf="@+id/vegetableImage"
                 android:id="@+id/clickheretoorder"
-                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
                 android:layout_marginTop="4dp"
                 tools:text="Click  to Order"/>
 

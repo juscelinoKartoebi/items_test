@@ -22,9 +22,11 @@ public class OrderHelper extends SQLiteOpenHelper {
                 + OrderContract.OrderEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 +  OrderContract.OrderEntry.COLUMN_NAME + " TEXT NOT NULL, "
                 +  OrderContract.OrderEntry.COLUMN_QUANTITY + " TEXT NOT NULL, "
-                +  OrderContract.OrderEntry.COLUMN_PRICE + " TEXT NOT NULL, "
+                +  OrderContract.OrderEntry.COLUMN_PRICE + " TEXT NOT NULL,"
                 +  OrderContract.OrderEntry.COLUMN_HASTOPPING + " TEXT NOT NULL, "
-                +  OrderContract.OrderEntry.COLUMN_CREAM + " TEXT NOT NULL);";
+                +  OrderContract.OrderEntry.COLUMN_CREAM + " TEXT NOT NULL)";
+
+
 
         db.execSQL(SQL_TABLE);
     }

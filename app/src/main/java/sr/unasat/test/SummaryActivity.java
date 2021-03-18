@@ -11,7 +11,6 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import sr.unasat.test.Database.OrderContract;
-
 public class SummaryActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     public CartAdapter mAdapter;
