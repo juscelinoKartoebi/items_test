@@ -29,7 +29,7 @@ public class KousebandActivity extends AppCompatActivity implements LoaderManage
     ImageView imageView;
     ImageButton plusquantity, minusquantity;
     TextView quantitynumber, vegetableName, vegetablePrice;
-    CheckBox addToppings, addExtraCream;
+//    CheckBox addToppings, addExtraCream;
     Button addtoCart;
     int quantity;
     public Uri mCurrentCartUri;
@@ -46,13 +46,13 @@ public class KousebandActivity extends AppCompatActivity implements LoaderManage
         quantitynumber = findViewById(R.id.quantity);
         vegetableName = findViewById(R.id.vegetableNameinInfo);
         vegetablePrice = findViewById(R.id.vegetablePrice);
-        addToppings = findViewById(R.id.addToppings);
+//        addToppings = findViewById(R.id.addToppings);
         addtoCart = findViewById(R.id.addtocart);
-        addExtraCream = findViewById(R.id.addCream);
+//        addExtraCream = findViewById(R.id.addCream);
 
         // setting the name of drink
 
-        vegetableName.setText("Komkommer");
+        vegetableName.setText("Kouseband");
 
         addtoCart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,9 +79,9 @@ public class KousebandActivity extends AppCompatActivity implements LoaderManage
 
 
                 // checkBoxes functionality
-
-                int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-                vegetablePrice.setText("$ " + ifCheckBox);
+//
+//                int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
+//                vegetablePrice.setText("$ " + ifCheckBox);
 
             }
         });
@@ -104,8 +104,8 @@ public class KousebandActivity extends AppCompatActivity implements LoaderManage
 
                     // checkBoxes functionality
 
-                    int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-                    vegetablePrice.setText("$ " + ifCheckBox);
+//                    int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
+//                    vegetablePrice.setText("$ " + ifCheckBox);
                 }
             }
         });
@@ -126,19 +126,19 @@ public class KousebandActivity extends AppCompatActivity implements LoaderManage
         values.put(OrderContract.OrderEntry.COLUMN_PRICE, price);
         values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, quantity);
 
-        if (addExtraCream.isChecked()) {
-            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: YES");
-        } else {
-            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: NO");
-
-        }
-
-        if (addToppings.isChecked()) {
-            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: YES");
-        } else {
-            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: NO");
-
-        }
+//        if (addExtraCream.isChecked()) {
+//            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: YES");
+//        } else {
+//            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: NO");
+//
+//        }
+//
+//        if (addToppings.isChecked()) {
+//            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: YES");
+//        } else {
+//            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: NO");
+//
+//        }
 
         if (mCurrentCartUri == null) {
             Uri newUri = getContentResolver().insert(OrderContract.OrderEntry.CONTENT_URI, values);
@@ -155,22 +155,22 @@ public class KousebandActivity extends AppCompatActivity implements LoaderManage
 
     }
 
-    private int CalculatePrice(CheckBox addExtraCream, CheckBox addToppings) {
-
-        int basePrice = 5;
-
-        if (addExtraCream.isChecked()) {
-            // add the cream cost $2
-            basePrice = basePrice + 2;
-        }
-
-        if (addToppings.isChecked()) {
-            // topping cost is $3
-            basePrice = basePrice + 3;
-        }
-
-        return basePrice * quantity;
-    }
+//    private int CalculatePrice(CheckBox addExtraCream, CheckBox addToppings) {
+//
+//        int basePrice = 5;
+//
+//        if (addExtraCream.isChecked()) {
+//            // add the cream cost $2
+//            basePrice = basePrice + 2;
+//        }
+//
+//        if (addToppings.isChecked()) {
+//            // topping cost is $3
+//            basePrice = basePrice + 3;
+//        }
+//
+//        return basePrice * quantity;
+//    }
 
     private void displayQuantity() {
         quantitynumber.setText(String.valueOf(quantity));
@@ -181,9 +181,9 @@ public class KousebandActivity extends AppCompatActivity implements LoaderManage
         String[] projection = {OrderContract.OrderEntry._ID,
                 OrderContract.OrderEntry.COLUMN_NAME,
                 OrderContract.OrderEntry.COLUMN_PRICE,
-                OrderContract.OrderEntry.COLUMN_QUANTITY,
-                OrderContract.OrderEntry.COLUMN_CREAM,
-                OrderContract.OrderEntry.COLUMN_HASTOPPING
+                OrderContract.OrderEntry.COLUMN_QUANTITY
+//                OrderContract.OrderEntry.COLUMN_CREAM,
+//                OrderContract.OrderEntry.COLUMN_HASTOPPING
         };
 
         return new CursorLoader(this, mCurrentCartUri,
@@ -205,14 +205,14 @@ public class KousebandActivity extends AppCompatActivity implements LoaderManage
             int name = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_NAME);
             int price = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
             int quantity = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
-            int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
-            int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
+//            int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
+//            int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
 
             String nameofvegetable = cursor.getString(name);
             String priceofvegetable = cursor.getString(price);
             String quantityofvegetable = cursor.getString(quantity);
-            String yeshasCream = cursor.getString(hasCream);
-            String yeshastopping = cursor.getString(hasTopping);
+//            String yeshasCream = cursor.getString(hasCream);
+//            String yeshastopping = cursor.getString(hasTopping);
 
             vegetableName.setText(nameofvegetable);
             vegetablePrice.setText(priceofvegetable);

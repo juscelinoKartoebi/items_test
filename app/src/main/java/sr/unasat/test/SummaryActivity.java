@@ -46,9 +46,9 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
         String[] projection = {OrderContract.OrderEntry._ID,
                 OrderContract.OrderEntry.COLUMN_NAME,
                 OrderContract.OrderEntry.COLUMN_PRICE,
-                OrderContract.OrderEntry.COLUMN_QUANTITY,
-                OrderContract.OrderEntry.COLUMN_CREAM,
-                OrderContract.OrderEntry.COLUMN_HASTOPPING
+                OrderContract.OrderEntry.COLUMN_QUANTITY
+//                OrderContract.OrderEntry.COLUMN_CREAM,
+//                OrderContract.OrderEntry.COLUMN_HASTOPPING
         };
 
         return new CursorLoader(this, OrderContract.OrderEntry.CONTENT_URI,

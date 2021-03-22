@@ -50,8 +50,8 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
         String descriptionofdrink = modelList.get(position).getmDrinkDetail();
         int images = modelList.get(position).getmDrinkPhoto();
 
-        holder.mDrinkName.setText(nameofDrink);
-        holder.mDrinkDescription.setText(descriptionofdrink);
+        holder.mVegetableName.setText(nameofDrink);
+        holder.mVegetableDescription.setText(descriptionofdrink);
         holder.imageView.setImageResource(images);
 
     }
@@ -67,14 +67,14 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
 
         // here we will find the views on which we will inflate our data
 
-        TextView mDrinkName, mDrinkDescription;
+        TextView mVegetableName, mVegetableDescription;
         ImageView imageView;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            mDrinkName = itemView.findViewById(R.id.vegetableName);
-            mDrinkDescription = itemView.findViewById(R.id.description);
+            mVegetableName = itemView.findViewById(R.id.vegetableName);
+            mVegetableDescription = itemView.findViewById(R.id.description);
             imageView = itemView.findViewById(R.id.vegetableImage);
             itemView.setOnClickListener(this);
 

@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         modelList = new ArrayList<>();
         modelList.add(new Model("Komkommer", getString(R.string.komkommer), R.drawable.komkommer));
         modelList.add(new Model("pompoen", getString(R.string.pompoen), R.drawable.pompoen));
-        modelList.add(new Model("Komkommer", getString(R.string.kouseband), R.drawable.kouseband));
+        modelList.add(new Model("Kouseband", getString(R.string.kouseband), R.drawable.kouseband));
         modelList.add(new Model("boulanger", getString(R.string.boulanger), R.drawable.boulanger));
         modelList.add(new Model("klaroen", getString(R.string.klaroen), R.drawable.klaroen));
         modelList.add(new Model("kool", getString(R.string.kool), R.drawable.kool));

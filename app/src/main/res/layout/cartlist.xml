@@ -10,9 +10,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/orderSummary"
-        android:text="Drink Name"
+        android:text="Vegetable Name"
         android:textStyle="bold"
-        android:id="@+id/drinkNameinOrderSummary"
+        android:id="@+id/vegetableNameinOrderSummary"
         android:layout_marginStart="10dp"/>
 
 
@@ -20,31 +20,31 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/orderSummary"
-        android:layout_toEndOf="@+id/drinkNameinOrderSummary"
+        android:layout_toEndOf="@+id/vegetableNameinOrderSummary"
         android:text="x"
         android:textStyle="bold"
         android:id="@+id/quantityinOrderSummary"
         android:layout_marginStart="10dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/hasTopping"
-        android:textStyle="italic"
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/hasTopping"-->
+<!--        android:textStyle="italic"-->
 
-        android:layout_marginStart="20dp"
-        android:layout_below="@id/drinkNameinOrderSummary"
-        android:text="has topping"/>
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_below="@id/vegetableNameinOrderSummary"-->
+<!--        android:text="has topping"/>-->
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/hasTopping"
-        android:id="@+id/hasCream"
-        android:textStyle="italic"
-        android:layout_marginStart="20dp"
-        android:layout_below="@id/drinkNameinOrderSummary"
-        android:text="has cream"/>
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_toEndOf="@+id/hasTopping"-->
+<!--        android:id="@+id/hasCream"-->
+<!--        android:textStyle="italic"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_below="@id/vegetableNameinOrderSummary"-->
+<!--        android:text="has cream"/>-->
 
 
 
@@ -59,3 +59,4 @@
 
 
 </RelativeLayout>
+

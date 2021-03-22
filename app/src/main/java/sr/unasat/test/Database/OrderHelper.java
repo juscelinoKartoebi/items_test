@@ -8,8 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class OrderHelper extends SQLiteOpenHelper {
 
 
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABSE_NAME = "ord.db";
+    public static final int DATABASE_VERSION = 3;
+    public static final String DATABSE_NAME = "orde.db";
 
     public OrderHelper(Context context) {
         super(context, DATABSE_NAME, null, DATABASE_VERSION);
@@ -22,9 +22,9 @@ public class OrderHelper extends SQLiteOpenHelper {
                 + OrderContract.OrderEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 +  OrderContract.OrderEntry.COLUMN_NAME + " TEXT NOT NULL, "
                 +  OrderContract.OrderEntry.COLUMN_QUANTITY + " TEXT NOT NULL, "
-                +  OrderContract.OrderEntry.COLUMN_PRICE + " TEXT NOT NULL,"
-                +  OrderContract.OrderEntry.COLUMN_HASTOPPING + " TEXT NOT NULL, "
-                +  OrderContract.OrderEntry.COLUMN_CREAM + " TEXT NOT NULL)";
+                +  OrderContract.OrderEntry.COLUMN_PRICE + " TEXT NOT NULL)";
+//                +  OrderContract.OrderEntry.COLUMN_HASTOPPING + " TEXT NOT NULL, "
+//                +  OrderContract.OrderEntry.COLUMN_CREAM + " TEXT NOT NULL)";
 
 
 

@@ -24,7 +24,7 @@
                 android:layout_height="250dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/imageViewInfo"
-                android:src="@drawable/komkommer"/>
+                android:src="@drawable/kouseband"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -69,101 +69,97 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content">
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp">
 
             <ImageButton
+                android:id="@+id/addquantity"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_marginStart="130dp"
-                android:id="@+id/addquantity"
-                android:background="@drawable/plus"/>
+                android:background="@drawable/plus" />
 
             <TextView
+                android:id="@+id/quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="0"
-                android:textStyle="bold"
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
-                android:id="@+id/quantity"
+                android:layout_toEndOf="@+id/addquantity"
+                android:text="0"
                 android:textSize="28sp"
-                android:layout_toEndOf="@+id/addquantity"/>
+                android:textStyle="bold" />
 
-
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:id="@+id/subquantity"
-                android:layout_marginBottom="10dp"
-                android:layout_toEndOf="@+id/quantity"
-                android:background="@drawable/minus"/>
-
-
-            <RadioGroup
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_centerHorizontal="true"
-                android:id="@+id/radioGroup"
-                android:layout_below="@id/subquantity">
-
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hot"
-                    android:layout_marginEnd="10dp"
-                    android:id="@+id/hotradioButton"/>
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Iced"
-                    android:id="@+id/coldRadioButton"/>
-
-            </RadioGroup>
-
-            <CheckBox
-                android:id="@+id/addToppings"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/radioGroup"
-                android:layout_marginTop="-47dp"
-                android:text="Toppings $3" />
-
-            <CheckBox
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/addCream"
-                android:layout_below="@+id/addToppings"
-                android:text="Add Extra Cream $2"/>
-
-
-            <TextView
-                android:id="@+id/descriptioninfo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/addCream"
-                android:layout_margin="10dp"
-                android:layout_marginTop="35dp"
-                android:text="@string/klaroen"
-                android:textSize="15sp"
-                android:textStyle="italic" />
 
             <Button
                 android:id="@+id/addtocart"
                 android:layout_width="75dp"
                 android:layout_height="37dp"
-                android:layout_below="@+id/descriptioninfo"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="-211dp"
-                android:layout_marginRight="30dp"
-                android:layout_marginBottom="10dp"
+
                 android:background="#3F51B5"
                 android:text="Add to cart"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/subquantity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:layout_toEndOf="@+id/quantity"
+                android:background="@drawable/minus" />
+
+
+            <!--            <RadioGroup-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:orientation="horizontal"-->
+            <!--                android:layout_centerHorizontal="true"-->
+            <!--                android:id="@+id/radioGroup"-->
+            <!--                android:layout_below="@id/subquantity">-->
+
+
+            <!--                <RadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Hot"-->
+            <!--                    android:layout_marginEnd="10dp"-->
+            <!--                    android:id="@+id/hotradioButton"/>-->
+
+            <!--                <RadioButton-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:text="Iced"-->
+            <!--                    android:id="@+id/coldRadioButton"/>-->
+
+            <!--            </RadioGroup>-->
+
+            <!--            <CheckBox-->
+            <!--                android:id="@+id/addToppings"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/radioGroup"-->
+            <!--                android:layout_marginTop="-47dp"-->
+            <!--                android:text="Toppings $3" />-->
+
+            <!--            <CheckBox-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:id="@+id/addCream"-->
+            <!--                android:layout_below="@+id/addToppings"-->
+            <!--                android:text="Add Extra Cream $2"/>-->
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/descriptioninfo"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_below="@+id/addCream"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                android:layout_marginTop="35dp"-->
+            <!--                android:text="@string/antroewa"-->
+            <!--                android:textSize="15sp"-->
+            <!--                android:textStyle="italic" />-->
 
 
         </RelativeLayout>

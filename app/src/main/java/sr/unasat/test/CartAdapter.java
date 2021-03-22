@@ -31,10 +31,10 @@ public class CartAdapter extends CursorAdapter {
         TextView drinkName, yesCream, yesTopping, price, quantity;
 
 
-        drinkName = view.findViewById(R.id.drinkNameinOrderSummary);
+        drinkName = view.findViewById(R.id.vegetableNameinOrderSummary);
         price = view.findViewById(R.id.priceinOrderSummary);
-        yesCream = view.findViewById(R.id.hasCream);
-        yesTopping = view.findViewById(R.id.hasTopping);
+//        yesCream = view.findViewById(R.id.hasCream);
+//        yesTopping = view.findViewById(R.id.hasTopping);
         quantity = view.findViewById(R.id.quantityinOrderSummary);
 
         // getting the values by first getting the position of their columns
@@ -42,22 +42,22 @@ public class CartAdapter extends CursorAdapter {
         int name = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_NAME);
         int priceofdrink = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
         int quantityofdrink = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
-        int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
-        int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
+//        int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
+//        int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
 
 
         String nameofdrink = cursor.getString(name);
         String pricesofdrink = cursor.getString(priceofdrink);
         String quantitysofdrink = cursor.getString(quantityofdrink);
-        String yeshasCream = cursor.getString(hasCream);
-        String yeshastopping = cursor.getString(hasTopping);
+//        String yeshasCream = cursor.getString(hasCream);
+//        String yeshastopping = cursor.getString(hasTopping);
 
 
 
         drinkName.setText(nameofdrink);
         price.setText(pricesofdrink);
-        yesCream.setText(yeshasCream);
-        yesTopping.setText(yeshastopping);
+//        yesCream.setText(yeshasCream);
+//        yesTopping.setText(yeshastopping);
         quantity.setText(quantitysofdrink);
 
 
