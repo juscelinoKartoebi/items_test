@@ -1,8 +1,10 @@
 package sr.unasat.test.items;
 
+import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.content.ContentValues;
 import android.content.CursorLoader;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
@@ -57,11 +59,39 @@ public class AntroewaActivity extends AppCompatActivity implements LoaderManager
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AntroewaActivity.this, SummaryActivity.class);
-                startActivity(intent);
                 // once this button is clicked we want to save our values in the database and send those values
                 // right away to summary activity where we display the order info
 
-                SaveCart();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(AntroewaActivity.this);
+//set icon
+                alertDialog.setIcon(android.R.drawable.ic_dialog_alert)
+//set title
+                        .setTitle("Are you sure?")
+//set message
+                        .setMessage("clicking to yes wil add this item ")
+//set positive button
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //set what would happen when positive button is clicked
+                              // dialogInterface.cancel();
+                                startActivity(intent);
+                                SaveCart();
+                            }
+
+                        })
+//set negative button
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //set what should happen when negative button is clicked
+
+                            }
+                        })
+                        ;
+                AlertDialog Dialog  = alertDialog.create();
+                    Dialog.show();
+
             }
         });
 
