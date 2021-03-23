@@ -51,7 +51,7 @@
                 android:textStyle="italic"
                 android:textSize="26sp"
                 android:layout_toEndOf="@+id/vegetableImage"
-                tools:text="Green Tea"/>
+                tools:text="Vegetable"/>
 
             <TextView
                 android:layout_width="wrap_content"
