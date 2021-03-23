@@ -13,7 +13,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,7 +38,7 @@ public class KomkommerActivity extends AppCompatActivity implements LoaderManage
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info);
+        setContentView(R.layout.activity_Komkommer);
 
         imageView = findViewById(R.id.imageViewInfo);
         plusquantity = findViewById(R.id.addquantity);
@@ -97,7 +96,7 @@ public class KomkommerActivity extends AppCompatActivity implements LoaderManage
             @Override
             public void onClick(View v) {
                 // coffee price
-                int basePrice = 15;
+                int basePrice = 5;
                 quantity++;
                 displayQuantity();
                 int coffePrice = basePrice * quantity;
@@ -111,7 +110,7 @@ public class KomkommerActivity extends AppCompatActivity implements LoaderManage
             @Override
             public void onClick(View v) {
 
-                int basePrice = 15;
+                int basePrice = 5;
                 // because we dont want the quantity go less than 0
                 if (quantity == 0) {
                     Toast.makeText(KomkommerActivity.this, "Cant decrease quantity < 0", Toast.LENGTH_SHORT).show();

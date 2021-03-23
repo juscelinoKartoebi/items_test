@@ -97,7 +97,7 @@ public class KousebandActivity extends AppCompatActivity implements LoaderManage
             @Override
             public void onClick(View v) {
                 // coffee price
-                int basePrice = 15;
+                int basePrice = 5;
                 quantity++;
                 displayQuantity();
                 int coffePrice = basePrice * quantity;
