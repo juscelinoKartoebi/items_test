@@ -2,29 +2,29 @@ package sr.unasat.test;
 
 public class Model {
 
-    String mDrinkName;
-    String mDrinkDetail;
-    int mDrinkPhoto;
+    String mVegetableName;
+    String mVegetableDetail;
+    int mVegetablePhoto;
 
-    public Model (String mDrinkName, String mDrinkDetail, int mDrinkPhoto) {
-        this.mDrinkName = mDrinkName;
-        this.mDrinkDetail = mDrinkDetail;
-        this.mDrinkPhoto = mDrinkPhoto;
+    public Model (String mVegetableName, String mVegetableDetail, int mVegetablePhoto) {
+        this.mVegetableName = mVegetableName;
+        this.mVegetableDetail = mVegetableDetail;
+        this.mVegetablePhoto = mVegetablePhoto;
     }
 
 
 
 
-    public String getmDrinkName() {
-        return mDrinkName;
+    public String getmVegetableName() {
+        return mVegetableName;
     }
 
-    public String getmDrinkDetail() {
-        return mDrinkDetail;
+    public String getmVegetableDetail() {
+        return mVegetableDetail;
     }
 
-    public int getmDrinkPhoto() {
-        return mDrinkPhoto;
+    public int getmVegetablePhoto() {
+        return mVegetablePhoto;
     }
 }
 

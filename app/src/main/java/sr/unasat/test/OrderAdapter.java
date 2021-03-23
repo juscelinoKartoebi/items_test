@@ -46,12 +46,12 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.ViewHolder> 
 
         // here we will find the position and start setting the output on our views
 
-        String nameofDrink = modelList.get(position).getmDrinkName();
-        String descriptionofdrink = modelList.get(position).getmDrinkDetail();
-        int images = modelList.get(position).getmDrinkPhoto();
+        String nameofVegetable = modelList.get(position).getmVegetableName();
+        String descriptionofVegetable = modelList.get(position).getmVegetableDetail();
+        int images = modelList.get(position).getmVegetablePhoto();
 
-        holder.mVegetableName.setText(nameofDrink);
-        holder.mVegetableDescription.setText(descriptionofdrink);
+        holder.mVegetableName.setText(nameofVegetable);
+        holder.mVegetableDescription.setText(descriptionofVegetable);
         holder.imageView.setImageResource(images);
 
     }
