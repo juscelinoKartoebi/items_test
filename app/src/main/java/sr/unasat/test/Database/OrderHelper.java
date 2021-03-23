@@ -23,8 +23,7 @@ public class OrderHelper extends SQLiteOpenHelper {
                 +  OrderContract.OrderEntry.COLUMN_NAME + " TEXT NOT NULL, "
                 +  OrderContract.OrderEntry.COLUMN_QUANTITY + " TEXT NOT NULL, "
                 +  OrderContract.OrderEntry.COLUMN_PRICE + " TEXT NOT NULL)";
-//                +  OrderContract.OrderEntry.COLUMN_HASTOPPING + " TEXT NOT NULL, "
-//                +  OrderContract.OrderEntry.COLUMN_CREAM + " TEXT NOT NULL)";
+
 
 
 

@@ -26,8 +26,7 @@ public class OrderContract {
         public static final String COLUMN_NAME = "name";
         public static final String COLUMN_QUANTITY = "quantity";
         public static final String COLUMN_PRICE = "price";
-//        public static final String COLUMN_HASTOPPING = "hastoppings";
-//        public static final String COLUMN_CREAM = "hascream";
+
     }
 
 }

@@ -110,57 +110,6 @@
                 android:background="@drawable/minus" />
 
 
-            <!--            <RadioGroup-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:orientation="horizontal"-->
-            <!--                android:layout_centerHorizontal="true"-->
-            <!--                android:id="@+id/radioGroup"-->
-            <!--                android:layout_below="@id/subquantity">-->
-
-
-            <!--                <RadioButton-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Hot"-->
-            <!--                    android:layout_marginEnd="10dp"-->
-            <!--                    android:id="@+id/hotradioButton"/>-->
-
-            <!--                <RadioButton-->
-            <!--                    android:layout_width="wrap_content"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="Iced"-->
-            <!--                    android:id="@+id/coldRadioButton"/>-->
-
-            <!--            </RadioGroup>-->
-
-            <!--            <CheckBox-->
-            <!--                android:id="@+id/addToppings"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_below="@+id/radioGroup"-->
-            <!--                android:layout_marginTop="-47dp"-->
-            <!--                android:text="Toppings $3" />-->
-
-            <!--            <CheckBox-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:id="@+id/addCream"-->
-            <!--                android:layout_below="@+id/addToppings"-->
-            <!--                android:text="Add Extra Cream $2"/>-->
-
-
-            <!--            <TextView-->
-            <!--                android:id="@+id/descriptioninfo"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_below="@+id/addCream"-->
-            <!--                android:layout_margin="10dp"-->
-            <!--                android:layout_marginTop="35dp"-->
-            <!--                android:text="@string/antroewa"-->
-            <!--                android:textSize="15sp"-->
-            <!--                android:textStyle="italic" />-->
-
 
         </RelativeLayout>
 

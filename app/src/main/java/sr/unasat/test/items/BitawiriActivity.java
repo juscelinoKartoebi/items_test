@@ -1,9 +1,11 @@
 package sr.unasat.test.items;
 
 
+import android.app.AlertDialog;
 import android.app.LoaderManager;
 import android.content.ContentValues;
 import android.content.CursorLoader;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.Loader;
 import android.database.Cursor;
@@ -29,7 +31,6 @@ public class BitawiriActivity extends AppCompatActivity implements LoaderManager
     ImageView imageView;
     ImageButton plusquantity, minusquantity;
     TextView quantitynumber, vegetableName, vegetablePrice;
-//    CheckBox addToppings, addExtraCream;
     Button addtoCart;
     int quantity;
     public Uri mCurrentCartUri;
@@ -46,9 +47,7 @@ public class BitawiriActivity extends AppCompatActivity implements LoaderManager
         quantitynumber = findViewById(R.id.quantity);
         vegetableName = findViewById(R.id.vegetableNameinInfo);
         vegetablePrice = findViewById(R.id.vegetablePrice);
-//        addToppings = findViewById(R.id.addToppings);
         addtoCart = findViewById(R.id.addtocart);
-//        addExtraCream = findViewById(R.id.addCream);
 
         // setting the name of drink
 
@@ -58,13 +57,40 @@ public class BitawiriActivity extends AppCompatActivity implements LoaderManager
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(BitawiriActivity.this, SummaryActivity.class);
-                startActivity(intent);
                 // once this button is clicked we want to save our values in the database and send those values
                 // right away to summary activity where we display the order info
 
-                SaveCart();
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(BitawiriActivity.this);
+//set icon
+                alertDialog.setIcon(android.R.drawable.ic_dialog_alert)
+//set title
+                        .setTitle("Are you sure?")
+//set message
+                        .setMessage("clicking to yes wil add this item ")
+//set positive button
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                //set what would happen when positive button is clicked
+                                // dialogInterface.cancel();
+                                startActivity(intent);
+                                SaveCart();
+                            }
+        })
+                //set negative button
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        //set what should happen when negative button is clicked
+
+                    }
+                })
+                ;
+                AlertDialog Dialog  = alertDialog.create();
+                Dialog.show();
             }
         });
+
 
         plusquantity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,10 +104,6 @@ public class BitawiriActivity extends AppCompatActivity implements LoaderManager
                 vegetablePrice.setText(setnewPrice);
 
 
-                // checkBoxes functionality
-
-//                int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-//                vegetablePrice.setText("$ " + ifCheckBox);
 
             }
         });
@@ -101,11 +123,6 @@ public class BitawiriActivity extends AppCompatActivity implements LoaderManager
                     String setnewPrice = String.valueOf(coffePrice);
                     vegetablePrice.setText(setnewPrice);
 
-
-                    // checkBoxes functionality
-
-//                    int ifCheckBox = CalculatePrice(addExtraCream, addToppings);
-//                    vegetablePrice.setText("$ " + ifCheckBox);
                 }
             }
         });
@@ -125,20 +142,6 @@ public class BitawiriActivity extends AppCompatActivity implements LoaderManager
         values.put(OrderContract.OrderEntry.COLUMN_PRICE, price);
         values.put(OrderContract.OrderEntry.COLUMN_QUANTITY, quantity);
 
-//        if (addExtraCream.isChecked()) {
-//            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: YES");
-//        } else {
-//            values.put(OrderContract.OrderEntry.COLUMN_CREAM, "Has Cream: NO");
-//
-//        }
-//
-//        if (addToppings.isChecked()) {
-//            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: YES");
-//        } else {
-//            values.put(OrderContract.OrderEntry.COLUMN_HASTOPPING, "Has Toppings: NO");
-//
-//        }
-
         if (mCurrentCartUri == null) {
             Uri newUri = getContentResolver().insert(OrderContract.OrderEntry.CONTENT_URI, values);
             if (newUri == null) {
@@ -153,23 +156,7 @@ public class BitawiriActivity extends AppCompatActivity implements LoaderManager
         return hasAllRequiredValues;
 
     }
-//
-//    private int CalculatePrice(CheckBox addExtraCream, CheckBox addToppings) {
-//
-//        int basePrice = 10;
-//
-//        if (addExtraCream.isChecked()) {
-//            // add the cream cost $2
-//            basePrice = basePrice + 2;
-//        }
-//
-//        if (addToppings.isChecked()) {
-//            // topping cost is $3
-//            basePrice = basePrice + 3;
-//        }
 
-//        return basePrice * quantity;
-//    }
 
     private void displayQuantity() {
         quantitynumber.setText(String.valueOf(quantity));
@@ -204,14 +191,10 @@ public class BitawiriActivity extends AppCompatActivity implements LoaderManager
             int name = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_NAME);
             int price = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
             int quantity = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
-//            int hasCream = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_CREAM);
-//            int hasTopping = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_HASTOPPING);
 
             String nameofvegetable = cursor.getString(name);
             String priceofvegetable = cursor.getString(price);
             String quantityofvegetable = cursor.getString(quantity);
-//            String yeshasCream = cursor.getString(hasCream);
-//            String yeshastopping = cursor.getString(hasTopping);
 
             vegetableName.setText(nameofvegetable);
             vegetablePrice.setText(priceofvegetable);
