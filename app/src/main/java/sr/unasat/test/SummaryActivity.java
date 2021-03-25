@@ -5,6 +5,9 @@ import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +16,7 @@ import android.widget.ListView;
 import sr.unasat.test.Database.OrderContract;
 public class SummaryActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
+    Button sendorder;
     public CartAdapter mAdapter;
     public static final int LOADER = 0;
 
@@ -23,6 +27,7 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
 
 
         Button clearthedata = findViewById(R.id.clearthedatabase);
+        sendorder = findViewById(R.id.sendorder);
 
         clearthedata.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +41,22 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
         ListView listView = findViewById(R.id.list);
         mAdapter = new CartAdapter(this, null);
         listView.setAdapter(mAdapter);
+
+        sendorder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                NotificationCompat.Builder builder = new NotificationCompat.Builder(SummaryActivity.this, "My Notification");
+                builder.setContentTitle("sent");
+                builder.setContentText("Your order has been sent");
+                builder.setSmallIcon(R.drawable.ic_launcher_background);
+                builder.setAutoCancel(true);
+
+                NotificationManagerCompat managerCompat = NotificationManagerCompat.from(SummaryActivity.this);
+          managerCompat.notify(1, builder.build());
+
+            }
+        });
 
 
 
