@@ -47,7 +47,7 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
             public void onClick(View v) {
 
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(SummaryActivity.this, "My Notification");
-                builder.setContentTitle("sent");
+//                builder.setContentTitle("sent");
                 builder.setContentText("Your order has been sent");
                 builder.setSmallIcon(R.drawable.ic_launcher_background);
                 builder.setAutoCancel(true);
