@@ -1,13 +1,13 @@
 <resources>
     <string name="app_name">test</string>
-    <string name="komkommer">Grote, groene komkommers</string>
-    <string name="pompoen">Ronde pompoens</string>
-    <string name="kouseband">Groene, lange kouseband</string>
-    <string name="antroewa">Kleine antroewas</string>
+    <string name="komkommer">Grote, verse komkommers</string>
+    <string name="pompoen">Grote ronde pompoens</string>
+    <string name="kouseband">lange, dikke en verse kouseband</string>
+    <string name="antroewa">Verse antroewas</string>
     <string name="boulanger">Dikke, gladde boulangers</string>
     <string name="bitawiri">Grote, zachte bladeren</string>
-    <string name="kool">Groen kool met gaten</string>
-    <string name="klaroen">Kleine blaadjes met weinig bloemen</string>
+    <string name="kool">Groene verse kool</string>
+    <string name="klaroen">fijne blaadjes met weinig bloemen</string>
 
     <string name="action_settings">Settings</string>
     <string name="login">LOGIN</string>
