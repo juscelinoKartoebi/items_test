@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sr.unasat.test">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -12,8 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Test">
+        <activity android:name=".RegisterActivity"/>
         <activity android:name=".SummaryActivity" />
-        <activity android:name=".items.AntroewaActivity"/>
+        <activity android:name=".items.AntroewaActivity" />
         <activity android:name=".items.BitawiriActivity" />
         <activity android:name=".items.PompoenActivity" />
         <activity android:name=".items.BoulangerActivity" />
@@ -21,7 +23,8 @@
         <activity android:name=".items.KousebandActivity" />
         <activity android:name=".items.KomkommerActivity" />
         <activity android:name=".items.KoolActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"/>
+            <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

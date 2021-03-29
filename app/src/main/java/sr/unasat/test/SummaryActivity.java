@@ -1,5 +1,6 @@
 package sr.unasat.test;
 
+
 import android.app.LoaderManager;
 import android.content.CursorLoader;
 import android.content.Loader;
@@ -53,7 +54,7 @@ public class SummaryActivity extends AppCompatActivity implements LoaderManager.
                 builder.setAutoCancel(true);
 
                 NotificationManagerCompat managerCompat = NotificationManagerCompat.from(SummaryActivity.this);
-          managerCompat.notify(1, builder.build());
+                managerCompat.notify(1, builder.build());
 
             }
         });
