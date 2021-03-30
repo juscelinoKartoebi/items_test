@@ -97,7 +97,7 @@ public class BoulangerActivity extends AppCompatActivity implements LoaderManage
             @Override
             public void onClick(View v) {
                 // coffee price
-                int basePrice = 15;
+                int basePrice = 7;
                 quantity++;
                 displayQuantity();
                 int coffePrice = basePrice * quantity;
@@ -111,7 +111,7 @@ public class BoulangerActivity extends AppCompatActivity implements LoaderManage
             @Override
             public void onClick(View v) {
 
-                int basePrice = 15;
+                int basePrice = 7;
                 // because we dont want the quantity go less than 0
                 if (quantity == 0) {
                     Toast.makeText(BoulangerActivity.this, "Cant decrease quantity < 0", Toast.LENGTH_SHORT).show();

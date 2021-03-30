@@ -97,7 +97,7 @@ public class AntroewaActivity extends AppCompatActivity implements LoaderManager
             @Override
             public void onClick(View v) {
                 // coffee price
-                int basePrice = 10;
+                int basePrice = 5;
                 quantity++;
                 displayQuantity();
                 int coffePrice = basePrice * quantity;
@@ -111,7 +111,7 @@ public class AntroewaActivity extends AppCompatActivity implements LoaderManager
             @Override
             public void onClick(View v) {
 
-                int basePrice = 10;
+                int basePrice = 5;
                 // because we dont want the quantity go less than 0
                 if (quantity == 0) {
                     Toast.makeText(AntroewaActivity.this, "Cant decrease quantity < 0", Toast.LENGTH_SHORT).show();
