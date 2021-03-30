@@ -32,24 +32,23 @@
                 android:id="@+id/list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingTop="40dp" />
+                android:paddingTop="40dp" >
 
-            <Button
-                android:id="@+id/clearthedatabase"
-                android:layout_width="147dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@android:color/holo_red_dark"
-                android:text="Clear The DATABASE"
-                android:textColor="@android:color/white" />
+                <Button
+                    android:id="@+id/clearthedatabase"
+                    android:layout_width="141dp"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@android:color/holo_red_dark"
+                    android:text="Delete list"
+                    android:textColor="@android:color/white" />
+            </ListView>
 
             <Button
                 android:id="@+id/sendorder"
-                android:layout_width="96dp"
-                android:layout_height="wrap_content"
+                android:layout_width="95dp"
+                android:layout_height="61dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="30dp"
@@ -58,10 +57,8 @@
                 android:text="send order"
                 android:textColor="@android:color/white" />
 
-
-
-
         </RelativeLayout>
+
 
 
 
