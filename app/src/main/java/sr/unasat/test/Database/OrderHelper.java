@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class OrderHelper extends SQLiteOpenHelper {
 
 
-    public static final int DATABASE_VERSION = 3;
+    public static final int DATABASE_VERSION = 4;
     public static final String DATABSE_NAME = "orde.db";
 
     public OrderHelper(Context context) {

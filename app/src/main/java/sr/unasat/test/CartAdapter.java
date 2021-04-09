@@ -29,6 +29,7 @@ public class CartAdapter extends CursorAdapter {
         // getting theviews
 
         TextView drinkName, price, quantity;
+        String total;
 
 
         drinkName = view.findViewById(R.id.vegetableNameinOrderSummary);
