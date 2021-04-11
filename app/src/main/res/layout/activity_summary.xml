@@ -54,7 +54,7 @@
                     android:layout_marginEnd="42dp"
                     android:layout_marginBottom="15dp"
                     android:background="@android:color/holo_red_dark"
-                    android:text="Clear The DATABASE"
+                    android:text="Clear The List"
                     android:textColor="@android:color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"

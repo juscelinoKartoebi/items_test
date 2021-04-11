@@ -28,31 +28,31 @@ public class CartAdapter extends CursorAdapter {
 
         // getting theviews
 
-        TextView drinkName, price, quantity;
+        TextView vegetableName, price, quantity;
         String total;
 
 
-        drinkName = view.findViewById(R.id.vegetableNameinOrderSummary);
+        vegetableName = view.findViewById(R.id.vegetableNameinOrderSummary);
         price = view.findViewById(R.id.priceinOrderSummary);
         quantity = view.findViewById(R.id.quantityinOrderSummary);
 
         // getting the values by first getting the position of their columns
 
         int name = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_NAME);
-        int priceofdrink = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
-        int quantityofdrink = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
+        int priceofvegetable = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_PRICE);
+        int quantityofvegetable = cursor.getColumnIndex(OrderContract.OrderEntry.COLUMN_QUANTITY);
 
 
 
-        String nameofdrink = cursor.getString(name);
-        String pricesofdrink = cursor.getString(priceofdrink);
-        String quantitysofdrink = cursor.getString(quantityofdrink);
+        String nameofvegetable = cursor.getString(name);
+        String pricesofvegetable= cursor.getString(priceofvegetable);
+        String quantitysofvegetable = cursor.getString(quantityofvegetable);
 
 
 
-        drinkName.setText(nameofdrink);
-        price.setText(pricesofdrink);
-        quantity.setText(quantitysofdrink);
+        vegetableName.setText(nameofvegetable);
+        price.setText(pricesofvegetable);
+        quantity.setText(quantitysofvegetable);
 
 
 
